@@ -1,0 +1,854 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		743675902F8398E900F673BD /* QualityScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A32F7CEBE900A45DC7 /* QualityScore.swift */; };
+		743675912F8398E900F673BD /* WiFiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A42F7CEBE900A45DC7 /* WiFiInfo.swift */; };
+		743675922F8398E900F673BD /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A101DF00A101DF00A101 /* DeviceType.swift */; };
+		743675932F8398E900F673BD /* SavedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A202DF00A202DF00A202 /* SavedDevice.swift */; };
+		743675942F8398E900F673BD /* NetworkMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A22F7CEBE900A45DC7 /* NetworkMetrics.swift */; };
+		743675952F83990A00F673BD /* ThroughputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21E62F7D032F00A45DC7 /* ThroughputService.swift */; };
+		743675962F83990A00F673BD /* PingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A92F7CEBE900A45DC7 /* PingService.swift */; };
+		743675972F83990A00F673BD /* SiteSpeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA000F2F8A000100A45DC7 /* SiteSpeedService.swift */; };
+		743675982F83990A00F673BD /* DNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A62F7CEBE900A45DC7 /* DNSService.swift */; };
+		743675992F83990A00F673BD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A72F7CEBE900A45DC7 /* NetworkMonitor.swift */; };
+		7436759A2F83990A00F673BD /* VPNDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AA2F7CEBE900A45DC7 /* VPNDetectionService.swift */; };
+		7436759B2F83990A00F673BD /* DeviceFingerprintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A404DF00A404DF00A404 /* DeviceFingerprintService.swift */; };
+		7436759D2F83990A00F673BD /* NetworkScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00112F8A000100A45DC7 /* NetworkScanService.swift */; };
+		7436759F2F83990A00F673BD /* PacketLossService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A82F7CEBE900A45DC7 /* PacketLossService.swift */; };
+		743675A02F83991500F673BD /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AF2F7CEBE900A45DC7 /* UserDefaultsManager.swift */; };
+		743675A12F83991500F673BD /* ScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AE2F7CEBE900A45DC7 /* ScoreCalculator.swift */; };
+		743675A22F83991500F673BD /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AD2F7CEBE900A45DC7 /* ColorExtension.swift */; };
+		743F21C32F7CEBE900A45DC7 /* WiFiInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AB2F7CEBE900A45DC7 /* WiFiInfoService.swift */; };
+		743F21C42F7CEBE900A45DC7 /* PacketLossService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A82F7CEBE900A45DC7 /* PacketLossService.swift */; };
+		743F21C52F7CEBE900A45DC7 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21B92F7CEBE900A45DC7 /* GlassCard.swift */; };
+		743F21C72F7CEBE900A45DC7 /* NetworkMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A22F7CEBE900A45DC7 /* NetworkMetrics.swift */; };
+		743F21C82F7CEBE900A45DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F219F2F7CEBE900A45DC7 /* AppDelegate.swift */; };
+		743F21C92F7CEBE900A45DC7 /* ScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AE2F7CEBE900A45DC7 /* ScoreCalculator.swift */; };
+		743F21CA2F7CEBE900A45DC7 /* DNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A62F7CEBE900A45DC7 /* DNSService.swift */; };
+		743F21CC2F7CEBE900A45DC7 /* BlockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21B52F7CEBE900A45DC7 /* BlockedView.swift */; };
+		743F21CD2F7CEBE900A45DC7 /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21B12F7CEBE900A45DC7 /* NetworkViewModel.swift */; };
+		743F21CE2F7CEBE900A45DC7 /* PingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A92F7CEBE900A45DC7 /* PingService.swift */; };
+		743F21CF2F7CEBE900A45DC7 /* SupportSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21BF2F7CEBE900A45DC7 /* SupportSheet.swift */; };
+		743F21D02F7CEBE900A45DC7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AD2F7CEBE900A45DC7 /* ColorExtension.swift */; };
+		743F21D12F7CEBE900A45DC7 /* WiFiInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21C12F7CEBE900A45DC7 /* WiFiInfoCard.swift */; };
+		743F21D22F7CEBE900A45DC7 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AF2F7CEBE900A45DC7 /* UserDefaultsManager.swift */; };
+		743F21D42F7CEBE900A45DC7 /* TooltipSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21C02F7CEBE900A45DC7 /* TooltipSheet.swift */; };
+		743F21D62F7CEBE900A45DC7 /* QualityScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A32F7CEBE900A45DC7 /* QualityScore.swift */; };
+		743F21D72F7CEBE900A45DC7 /* MetricsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21BB2F7CEBE900A45DC7 /* MetricsCard.swift */; };
+		743F21D92F7CEBE900A45DC7 /* PublicBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21BC2F7CEBE900A45DC7 /* PublicBanner.swift */; };
+		743F21DA2F7CEBE900A45DC7 /* GaugeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21B82F7CEBE900A45DC7 /* GaugeCard.swift */; };
+		743F21DC2F7CEBE900A45DC7 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A72F7CEBE900A45DC7 /* NetworkMonitor.swift */; };
+		743F21DD2F7CEBE900A45DC7 /* WiFiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21A42F7CEBE900A45DC7 /* WiFiInfo.swift */; };
+		743F21DE2F7CEBE900A45DC7 /* VPNDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21AA2F7CEBE900A45DC7 /* VPNDetectionService.swift */; };
+		743F21DF2F7CEBE900A45DC7 /* EnterpriseBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21B72F7CEBE900A45DC7 /* EnterpriseBanner.swift */; };
+		743F21E72F7D032F00A45DC7 /* ThroughputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F21E62F7D032F00A45DC7 /* ThroughputService.swift */; };
+		743F21F02F7E000000A45DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743F21EF2F7E000000A45DC7 /* Assets.xcassets */; };
+		746E4B8F2F847596007A9B79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E4B8E2F847596007A9B79 /* OnboardingView.swift */; };
+		74AA00022F8A000100A45DC7 /* WiFiCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00012F8A000100A45DC7 /* WiFiCheckApp.swift */; };
+		74AA00042F8A000100A45DC7 /* TabRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00032F8A000100A45DC7 /* TabRootView.swift */; };
+		74AA00062F8A000100A45DC7 /* WiFiInfoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00052F8A000100A45DC7 /* WiFiInfoTab.swift */; };
+		74AA00082F8A000100A45DC7 /* SpeedTestTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00072F8A000100A45DC7 /* SpeedTestTab.swift */; };
+		74AA000A2F8A000100A45DC7 /* NetworkScanTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00092F8A000100A45DC7 /* NetworkScanTab.swift */; };
+		74AA000E2F8A000100A45DC7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA000D2F8A000100A45DC7 /* SettingsView.swift */; };
+		74AA00102F8A000100A45DC7 /* SiteSpeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA000F2F8A000100A45DC7 /* SiteSpeedService.swift */; };
+		74AA00122F8A000100A45DC7 /* NetworkScanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA00112F8A000100A45DC7 /* NetworkScanService.swift */; };
+		A1000001A1B2C3D4E5F60001 /* WiFiCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002A1B2C3D4E5F60001 /* WiFiCheckUITests.swift */; };
+		DF00B101DF00B101DF00B101 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A101DF00A101DF00A101 /* DeviceType.swift */; };
+		DF00B202DF00B202DF00B202 /* SavedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A202DF00A202DF00A202 /* SavedDevice.swift */; };
+		DF00B404DF00B404DF00B404 /* DeviceFingerprintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A404DF00A404DF00A404 /* DeviceFingerprintService.swift */; };
+		DF00B505DF00B505DF00B505 /* DeviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00A505DF00A505DF00A505 /* DeviceDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10000000000000D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 743F21472F7CE52000A45DC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 743F214E2F7CE52000A45DC7;
+			remoteInfo = WiFiCheck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		743675512F83921200F673BD /* Wi​Fi​Check ​TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wi​Fi​Check ​TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		743F214F2F7CE52000A45DC7 /* WiFiCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		743F219F2F7CEBE900A45DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		743F21A22F7CEBE900A45DC7 /* NetworkMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMetrics.swift; sourceTree = "<group>"; };
+		743F21A32F7CEBE900A45DC7 /* QualityScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityScore.swift; sourceTree = "<group>"; };
+		743F21A42F7CEBE900A45DC7 /* WiFiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfo.swift; sourceTree = "<group>"; };
+		743F21A62F7CEBE900A45DC7 /* DNSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSService.swift; sourceTree = "<group>"; };
+		743F21A72F7CEBE900A45DC7 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		743F21A82F7CEBE900A45DC7 /* PacketLossService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketLossService.swift; sourceTree = "<group>"; };
+		743F21A92F7CEBE900A45DC7 /* PingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingService.swift; sourceTree = "<group>"; };
+		743F21AA2F7CEBE900A45DC7 /* VPNDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNDetectionService.swift; sourceTree = "<group>"; };
+		743F21AB2F7CEBE900A45DC7 /* WiFiInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfoService.swift; sourceTree = "<group>"; };
+		743F21AD2F7CEBE900A45DC7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		743F21AE2F7CEBE900A45DC7 /* ScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCalculator.swift; sourceTree = "<group>"; };
+		743F21AF2F7CEBE900A45DC7 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		743F21B12F7CEBE900A45DC7 /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
+		743F21B52F7CEBE900A45DC7 /* BlockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedView.swift; sourceTree = "<group>"; };
+		743F21B72F7CEBE900A45DC7 /* EnterpriseBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseBanner.swift; sourceTree = "<group>"; };
+		743F21B82F7CEBE900A45DC7 /* GaugeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeCard.swift; sourceTree = "<group>"; };
+		743F21B92F7CEBE900A45DC7 /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		743F21BB2F7CEBE900A45DC7 /* MetricsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsCard.swift; sourceTree = "<group>"; };
+		743F21BC2F7CEBE900A45DC7 /* PublicBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicBanner.swift; sourceTree = "<group>"; };
+		743F21BF2F7CEBE900A45DC7 /* SupportSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportSheet.swift; sourceTree = "<group>"; };
+		743F21C02F7CEBE900A45DC7 /* TooltipSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TooltipSheet.swift; sourceTree = "<group>"; };
+		743F21C12F7CEBE900A45DC7 /* WiFiInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfoCard.swift; sourceTree = "<group>"; };
+		743F21E12F7CED9000A45DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = WiFiCheck/Info.plist; sourceTree = "<group>"; };
+		743F21E52F7CEE9600A45DC7 /* WiFiCheck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = WiFiCheck.entitlements; path = WiFiCheck/WiFiCheck.entitlements; sourceTree = "<group>"; };
+		743F21E62F7D032F00A45DC7 /* ThroughputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThroughputService.swift; sourceTree = "<group>"; };
+		743F21EF2F7E000000A45DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WiFiCheck/Assets.xcassets; sourceTree = "<group>"; };
+		746E4B8E2F847596007A9B79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		74AA00012F8A000100A45DC7 /* WiFiCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiCheckApp.swift; sourceTree = "<group>"; };
+		74AA00032F8A000100A45DC7 /* TabRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRootView.swift; sourceTree = "<group>"; };
+		74AA00052F8A000100A45DC7 /* WiFiInfoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiInfoTab.swift; sourceTree = "<group>"; };
+		74AA00072F8A000100A45DC7 /* SpeedTestTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestTab.swift; sourceTree = "<group>"; };
+		74AA00092F8A000100A45DC7 /* NetworkScanTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScanTab.swift; sourceTree = "<group>"; };
+		74AA000D2F8A000100A45DC7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74AA000F2F8A000100A45DC7 /* SiteSpeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSpeedService.swift; sourceTree = "<group>"; };
+		74AA00112F8A000100A45DC7 /* NetworkScanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScanService.swift; sourceTree = "<group>"; };
+		A1000002A1B2C3D4E5F60001 /* WiFiCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiCheckUITests.swift; sourceTree = "<group>"; };
+		A1000005A1B2C3D4E5F60001 /* WiFiCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF00A101DF00A101DF00A101 /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		DF00A202DF00A202DF00A202 /* SavedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDevice.swift; sourceTree = "<group>"; };
+		DF00A404DF00A404DF00A404 /* DeviceFingerprintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFingerprintService.swift; sourceTree = "<group>"; };
+		DF00A505DF00A505DF00A505 /* DeviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		743675522F83921200F673BD /* Wi​Fi​Check ​TV */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Wi​Fi​Check ​TV";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7436754E2F83921200F673BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		743F214C2F7CE52000A45DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000007A1B2C3D4E5F60001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		743F21462F7CE52000A45DC7 = {
+			isa = PBXGroup;
+			children = (
+				743F21E52F7CEE9600A45DC7 /* WiFiCheck.entitlements */,
+				743F21E12F7CED9000A45DC7 /* Info.plist */,
+				743F21EF2F7E000000A45DC7 /* Assets.xcassets */,
+				743F21A12F7CEBE900A45DC7 /* WiFiCheck/App */,
+				743F21A52F7CEBE900A45DC7 /* WiFiCheck/Models */,
+				743F21AC2F7CEBE900A45DC7 /* WiFiCheck/Services */,
+				743F21B02F7CEBE900A45DC7 /* WiFiCheck/Utilities */,
+				743F21B42F7CEBE900A45DC7 /* WiFiCheck/ViewModels */,
+				743F21C22F7CEBE900A45DC7 /* WiFiCheck/Views */,
+				A1000003A1B2C3D4E5F60001 /* WiFiCheckUITests */,
+				743675522F83921200F673BD /* Wi​Fi​Check ​TV */,
+				743F21E22F7CEE8800A45DC7 /* Frameworks */,
+				743F21502F7CE52000A45DC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		743F21502F7CE52000A45DC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				743F214F2F7CE52000A45DC7 /* WiFiCheck.app */,
+				A1000005A1B2C3D4E5F60001 /* WiFiCheckUITests.xctest */,
+				743675512F83921200F673BD /* Wi​Fi​Check ​TV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		743F21A12F7CEBE900A45DC7 /* WiFiCheck/App */ = {
+			isa = PBXGroup;
+			children = (
+				743F219F2F7CEBE900A45DC7 /* AppDelegate.swift */,
+				74AA00012F8A000100A45DC7 /* WiFiCheckApp.swift */,
+			);
+			path = WiFiCheck/App;
+			sourceTree = "<group>";
+		};
+		743F21A52F7CEBE900A45DC7 /* WiFiCheck/Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF00A101DF00A101DF00A101 /* DeviceType.swift */,
+				743F21A22F7CEBE900A45DC7 /* NetworkMetrics.swift */,
+				743F21A32F7CEBE900A45DC7 /* QualityScore.swift */,
+				DF00A202DF00A202DF00A202 /* SavedDevice.swift */,
+				743F21A42F7CEBE900A45DC7 /* WiFiInfo.swift */,
+			);
+			path = WiFiCheck/Models;
+			sourceTree = "<group>";
+		};
+		743F21AC2F7CEBE900A45DC7 /* WiFiCheck/Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF00A404DF00A404DF00A404 /* DeviceFingerprintService.swift */,
+				743F21A62F7CEBE900A45DC7 /* DNSService.swift */,
+				743F21A72F7CEBE900A45DC7 /* NetworkMonitor.swift */,
+				74AA00112F8A000100A45DC7 /* NetworkScanService.swift */,
+				743F21A82F7CEBE900A45DC7 /* PacketLossService.swift */,
+				743F21A92F7CEBE900A45DC7 /* PingService.swift */,
+				74AA000F2F8A000100A45DC7 /* SiteSpeedService.swift */,
+				743F21E62F7D032F00A45DC7 /* ThroughputService.swift */,
+				743F21AA2F7CEBE900A45DC7 /* VPNDetectionService.swift */,
+				743F21AB2F7CEBE900A45DC7 /* WiFiInfoService.swift */,
+			);
+			path = WiFiCheck/Services;
+			sourceTree = "<group>";
+		};
+		743F21B02F7CEBE900A45DC7 /* WiFiCheck/Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				743F21AD2F7CEBE900A45DC7 /* ColorExtension.swift */,
+				743F21AE2F7CEBE900A45DC7 /* ScoreCalculator.swift */,
+				743F21AF2F7CEBE900A45DC7 /* UserDefaultsManager.swift */,
+			);
+			path = WiFiCheck/Utilities;
+			sourceTree = "<group>";
+		};
+		743F21B42F7CEBE900A45DC7 /* WiFiCheck/ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				743F21B12F7CEBE900A45DC7 /* NetworkViewModel.swift */,
+			);
+			path = WiFiCheck/ViewModels;
+			sourceTree = "<group>";
+		};
+		743F21C22F7CEBE900A45DC7 /* WiFiCheck/Views */ = {
+			isa = PBXGroup;
+			children = (
+				746E4B8E2F847596007A9B79 /* OnboardingView.swift */,
+				743F21B52F7CEBE900A45DC7 /* BlockedView.swift */,
+				DF00A505DF00A505DF00A505 /* DeviceDetailView.swift */,
+				743F21B72F7CEBE900A45DC7 /* EnterpriseBanner.swift */,
+				743F21B82F7CEBE900A45DC7 /* GaugeCard.swift */,
+				743F21B92F7CEBE900A45DC7 /* GlassCard.swift */,
+				743F21BB2F7CEBE900A45DC7 /* MetricsCard.swift */,
+				74AA00092F8A000100A45DC7 /* NetworkScanTab.swift */,
+				743F21BC2F7CEBE900A45DC7 /* PublicBanner.swift */,
+				74AA000D2F8A000100A45DC7 /* SettingsView.swift */,
+				74AA00072F8A000100A45DC7 /* SpeedTestTab.swift */,
+				743F21BF2F7CEBE900A45DC7 /* SupportSheet.swift */,
+				74AA00032F8A000100A45DC7 /* TabRootView.swift */,
+				743F21C02F7CEBE900A45DC7 /* TooltipSheet.swift */,
+				743F21C12F7CEBE900A45DC7 /* WiFiInfoCard.swift */,
+				74AA00052F8A000100A45DC7 /* WiFiInfoTab.swift */,
+			);
+			path = WiFiCheck/Views;
+			sourceTree = "<group>";
+		};
+		743F21E22F7CEE8800A45DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1000003A1B2C3D4E5F60001 /* WiFiCheckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1000002A1B2C3D4E5F60001 /* WiFiCheckUITests.swift */,
+			);
+			path = WiFiCheckUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		743675502F83921200F673BD /* Wi​Fi​Check ​TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7436755B2F83921400F673BD /* Build configuration list for PBXNativeTarget "Wi​Fi​Check ​TV" */;
+			buildPhases = (
+				7436754D2F83921200F673BD /* Sources */,
+				7436754E2F83921200F673BD /* Frameworks */,
+				7436754F2F83921200F673BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				743675522F83921200F673BD /* Wi​Fi​Check ​TV */,
+			);
+			name = "Wi​Fi​Check ​TV";
+			packageProductDependencies = (
+			);
+			productName = "Wi​Fi​Check ​TV";
+			productReference = 743675512F83921200F673BD /* Wi​Fi​Check ​TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		743F214E2F7CE52000A45DC7 /* WiFiCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 743F215A2F7CE52100A45DC7 /* Build configuration list for PBXNativeTarget "WiFiCheck" */;
+			buildPhases = (
+				743F214B2F7CE52000A45DC7 /* Sources */,
+				743F214C2F7CE52000A45DC7 /* Frameworks */,
+				743F214D2F7CE52000A45DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiCheck;
+			packageProductDependencies = (
+			);
+			productName = WiFiCheck;
+			productReference = 743F214F2F7CE52000A45DC7 /* WiFiCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1000004A1B2C3D4E5F60001 /* WiFiCheckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000B /* Build configuration list for PBXNativeTarget "WiFiCheckUITests" */;
+			buildPhases = (
+				A1000006A1B2C3D4E5F60001 /* Sources */,
+				A1000007A1B2C3D4E5F60001 /* Frameworks */,
+				A1000008A1B2C3D4E5F60001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10000000000000C /* PBXTargetDependency */,
+			);
+			name = WiFiCheckUITests;
+			packageProductDependencies = (
+			);
+			productName = WiFiCheckUITests;
+			productReference = A1000005A1B2C3D4E5F60001 /* WiFiCheckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		743F21472F7CE52000A45DC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					743675502F83921200F673BD = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					743F214E2F7CE52000A45DC7 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					A1000004A1B2C3D4E5F60001 = {
+						CreatedOnToolsVersion = 26.4;
+						TestTargetID = 743F214E2F7CE52000A45DC7;
+					};
+				};
+			};
+			buildConfigurationList = 743F214A2F7CE52000A45DC7 /* Build configuration list for PBXProject "Wifi Check" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 743F21462F7CE52000A45DC7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 743F21502F7CE52000A45DC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				743F214E2F7CE52000A45DC7 /* WiFiCheck */,
+				A1000004A1B2C3D4E5F60001 /* WiFiCheckUITests */,
+				743675502F83921200F673BD /* Wi​Fi​Check ​TV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7436754F2F83921200F673BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		743F214D2F7CE52000A45DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				743F21F02F7E000000A45DC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000008A1B2C3D4E5F60001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7436754D2F83921200F673BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				743675902F8398E900F673BD /* QualityScore.swift in Sources */,
+				743675912F8398E900F673BD /* WiFiInfo.swift in Sources */,
+				743675922F8398E900F673BD /* DeviceType.swift in Sources */,
+				743675932F8398E900F673BD /* SavedDevice.swift in Sources */,
+				743675942F8398E900F673BD /* NetworkMetrics.swift in Sources */,
+				743675A02F83991500F673BD /* UserDefaultsManager.swift in Sources */,
+				743675A12F83991500F673BD /* ScoreCalculator.swift in Sources */,
+				743675A22F83991500F673BD /* ColorExtension.swift in Sources */,
+				743675952F83990A00F673BD /* ThroughputService.swift in Sources */,
+				743675962F83990A00F673BD /* PingService.swift in Sources */,
+				743675972F83990A00F673BD /* SiteSpeedService.swift in Sources */,
+				743675982F83990A00F673BD /* DNSService.swift in Sources */,
+				743675992F83990A00F673BD /* NetworkMonitor.swift in Sources */,
+				7436759A2F83990A00F673BD /* VPNDetectionService.swift in Sources */,
+				7436759B2F83990A00F673BD /* DeviceFingerprintService.swift in Sources */,
+				7436759D2F83990A00F673BD /* NetworkScanService.swift in Sources */,
+				7436759F2F83990A00F673BD /* PacketLossService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		743F214B2F7CE52000A45DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				743F21C82F7CEBE900A45DC7 /* AppDelegate.swift in Sources */,
+				DF00B101DF00B101DF00B101 /* DeviceType.swift in Sources */,
+				DF00B202DF00B202DF00B202 /* SavedDevice.swift in Sources */,
+				DF00B404DF00B404DF00B404 /* DeviceFingerprintService.swift in Sources */,
+				DF00B505DF00B505DF00B505 /* DeviceDetailView.swift in Sources */,
+				743F21CC2F7CEBE900A45DC7 /* BlockedView.swift in Sources */,
+				743F21D02F7CEBE900A45DC7 /* ColorExtension.swift in Sources */,
+				743F21CA2F7CEBE900A45DC7 /* DNSService.swift in Sources */,
+				743F21DF2F7CEBE900A45DC7 /* EnterpriseBanner.swift in Sources */,
+				743F21DA2F7CEBE900A45DC7 /* GaugeCard.swift in Sources */,
+				743F21C52F7CEBE900A45DC7 /* GlassCard.swift in Sources */,
+				743F21D72F7CEBE900A45DC7 /* MetricsCard.swift in Sources */,
+				743F21C72F7CEBE900A45DC7 /* NetworkMetrics.swift in Sources */,
+				743F21DC2F7CEBE900A45DC7 /* NetworkMonitor.swift in Sources */,
+				74AA00122F8A000100A45DC7 /* NetworkScanService.swift in Sources */,
+				74AA000A2F8A000100A45DC7 /* NetworkScanTab.swift in Sources */,
+				743F21CD2F7CEBE900A45DC7 /* NetworkViewModel.swift in Sources */,
+				743F21C42F7CEBE900A45DC7 /* PacketLossService.swift in Sources */,
+				743F21CE2F7CEBE900A45DC7 /* PingService.swift in Sources */,
+				743F21D92F7CEBE900A45DC7 /* PublicBanner.swift in Sources */,
+				743F21D62F7CEBE900A45DC7 /* QualityScore.swift in Sources */,
+				743F21C92F7CEBE900A45DC7 /* ScoreCalculator.swift in Sources */,
+				74AA000E2F8A000100A45DC7 /* SettingsView.swift in Sources */,
+				74AA00102F8A000100A45DC7 /* SiteSpeedService.swift in Sources */,
+				74AA00082F8A000100A45DC7 /* SpeedTestTab.swift in Sources */,
+				743F21CF2F7CEBE900A45DC7 /* SupportSheet.swift in Sources */,
+				746E4B8F2F847596007A9B79 /* OnboardingView.swift in Sources */,
+				74AA00042F8A000100A45DC7 /* TabRootView.swift in Sources */,
+				743F21E72F7D032F00A45DC7 /* ThroughputService.swift in Sources */,
+				743F21D42F7CEBE900A45DC7 /* TooltipSheet.swift in Sources */,
+				743F21D22F7CEBE900A45DC7 /* UserDefaultsManager.swift in Sources */,
+				743F21DE2F7CEBE900A45DC7 /* VPNDetectionService.swift in Sources */,
+				74AA00022F8A000100A45DC7 /* WiFiCheckApp.swift in Sources */,
+				743F21DD2F7CEBE900A45DC7 /* WiFiInfo.swift in Sources */,
+				743F21D12F7CEBE900A45DC7 /* WiFiInfoCard.swift in Sources */,
+				743F21C32F7CEBE900A45DC7 /* WiFiInfoService.swift in Sources */,
+				74AA00062F8A000100A45DC7 /* WiFiInfoTab.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000006A1B2C3D4E5F60001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001A1B2C3D4E5F60001 /* WiFiCheckUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10000000000000C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 743F214E2F7CE52000A45DC7 /* WiFiCheck */;
+			targetProxy = A10000000000000D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		743675592F83921400F673BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Wi​Fi​Check ​TV/WiFiCheckTV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi-Check";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required by Apple to display your connected WiFi network name. We do not store or track your location.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Wi-Fi-Check--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Wi​Fi​Check ​TV/WiFiCheckTV-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Debug;
+		};
+		7436755A2F83921400F673BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Wi​Fi​Check ​TV/WiFiCheckTV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi-Check";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required by Apple to display your connected WiFi network name. We do not store or track your location.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Wi-Fi-Check--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Wi​Fi​Check ​TV/WiFiCheckTV-Bridging-Header.h";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Release;
+		};
+		743F21582F7CE52100A45DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		743F21592F7CE52100A45DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		743F215B2F7CE52100A45DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiFiCheck/WiFiCheck.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WiFiCheck/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Check";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "WiFi Check needs local network access to measure your WiFi quality by pinging your router.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required by Apple to display your connected WiFi network name. We do not store or track your location.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = Latest.WifiCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		743F215C2F7CE52100A45DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiFiCheck/WiFiCheck.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WiFiCheck/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WiFi Check";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "WiFi Check needs local network access to measure your WiFi quality by pinging your router.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required by Apple to display your connected WiFi network name. We do not store or track your location.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = Personal.WiFiCheck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A100000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Latest.WifiCheck.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = WiFiCheck;
+			};
+			name = Debug;
+		};
+		A10000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J22D497PH7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Latest.WifiCheck.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = WiFiCheck;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7436755B2F83921400F673BD /* Build configuration list for PBXNativeTarget "Wi​Fi​Check ​TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				743675592F83921400F673BD /* Debug */,
+				7436755A2F83921400F673BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		743F214A2F7CE52000A45DC7 /* Build configuration list for PBXProject "Wifi Check" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				743F21582F7CE52100A45DC7 /* Debug */,
+				743F21592F7CE52100A45DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		743F215A2F7CE52100A45DC7 /* Build configuration list for PBXNativeTarget "WiFiCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				743F215B2F7CE52100A45DC7 /* Debug */,
+				743F215C2F7CE52100A45DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000B /* Build configuration list for PBXNativeTarget "WiFiCheckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A100000000000009 /* Debug */,
+				A10000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 743F21472F7CE52000A45DC7 /* Project object */;
+}

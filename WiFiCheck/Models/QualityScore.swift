@@ -1,0 +1,62 @@
+//
+//  QualityScore.swift
+//  WiFi Check
+//
+
+import SwiftUI
+import Combine
+
+/// Quality level derived from composite score
+enum QualityLevel: String {
+    case excellent = "Excellent"
+    case good = "Good"
+    case fair = "Fair"
+    case poor = "Poor"
+    case veryPoor = "Very Poor"
+
+    var activityHint: String {
+        switch self {
+        case .excellent: return "4K streaming, video calls, gaming — all smooth"
+        case .good:      return "HD streaming and calls work fine"
+        case .fair:      return "Browsing works, video calls may stutter"
+        case .poor:      return "Weak signal — try moving closer to your router"
+        case .veryPoor:  return "Very weak — move closer to your router"
+        }
+    }
+
+    var color: Color {
+        switch self {
+        case .excellent: return Color(hex: "0A84FF")
+        case .good:      return Color(hex: "30D158")
+        case .fair:      return Color(hex: "FF9F0A")
+        case .poor:      return Color(hex: "FF453A")
+        case .veryPoor:  return Color(hex: "FF453A")
+        }
+    }
+}
+
+/// Composite quality score with 6 sub-scores
+struct QualityScore {
+    let composite: Int              // 0-100
+    let throughputSubScore: Int     // 0-100
+    let packetLossSubScore: Int     // 0-100
+    let jitterSubScore: Int         // 0-100
+    let internetSubScore: Int       // 0-100
+    let routerSubScore: Int         // 0-100
+    let dnsSubScore: Int            // 0-100
+    let level: QualityLevel
+
+    var hasThroughputScore: Bool { throughputSubScore >= 0 }
+    var hasJitterScore: Bool { jitterSubScore >= 0 }
+
+    static let zero = QualityScore(
+        composite: 0,
+        throughputSubScore: -1,
+        packetLossSubScore: 0,
+        jitterSubScore: -1,
+        internetSubScore: 0,
+        routerSubScore: 0,
+        dnsSubScore: 0,
+        level: .veryPoor
+    )
+}
