@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — WiFi Check (iOS App)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; color: #222; }
+        h1 { font-size: 24px; margin-bottom: 4px; }
+        h2 { font-size: 18px; margin-top: 32px; }
+        h3 { font-size: 15px; margin-top: 24px; }
+        p, li { font-size: 14px; }
+        .effective { font-size: 13px; color: #666; margin-bottom: 24px; }
+        .scope { background: #f5f5f5; border-left: 3px solid #333; padding: 12px 16px; margin: 16px 0; font-size: 13px; }
+        ul { padding-left: 20px; }
+        a { color: #0066cc; }
+    </style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="effective">Effective Date: April 2, 2026</p>
+<div class="scope">This privacy policy applies exclusively to the <strong>WiFi Check</strong> iOS application ("the App") developed by Santosh Talluri ("Developer", "I", "me"). It does not apply to any other product, service, or website.</div>
+
+<h2>1. Overview</h2>
+<p>WiFi Check is a network diagnostic tool that measures WiFi quality on your iOS device. The App is designed with privacy as a core principle. <strong>WiFi Check does not collect, store, or transmit any personal user data to any server owned or operated by the Developer.</strong> There is no WiFi Check backend server. All network measurements are performed locally on your device.</p>
+
+<h2>2. Information the App Does NOT Collect</h2>
+<p>WiFi Check does <strong>not</strong> collect any of the following:</p>
+<ul>
+    <li>Your name, email address, phone number, or any personal identifiers</li>
+    <li>Your physical location or GPS coordinates</li>
+    <li>Your browsing history or internet activity</li>
+    <li>Device identifiers (UDID, IMEI, serial number)</li>
+    <li>WiFi passwords or network credentials</li>
+    <li>MAC addresses of your device or other devices on your network</li>
+    <li>Contents of your network traffic</li>
+    <li>Analytics, usage data, or telemetry of any kind</li>
+</ul>
+
+<h2>3. Information Processed Locally on Your Device</h2>
+<p>The following data is generated and processed <strong>entirely on your device</strong>. It is never transmitted to the Developer or any third party:</p>
+<ul>
+    <li><strong>WiFi network name (SSID) and BSSID:</strong> Retrieved using Apple's NetworkExtension framework to display your connected network. Requires your location permission (mandated by Apple for WiFi SSID access). The App does not read, use, or store your actual geographic location.</li>
+    <li><strong>Local IP address and gateway IP address:</strong> Determined from your device's network interface to perform local network measurements.</li>
+    <li><strong>Network performance metrics:</strong> Download speed, latency, packet loss, jitter, and DNS resolution speed. Measured by sending standard network probes (TCP connections, UDP packets, DNS queries, HTTP downloads) to public infrastructure and your local router.</li>
+    <li><strong>Local network device list:</strong> IP addresses and hostnames of devices on your local WiFi network, discovered through standard network protocols (ICMP, TCP, UDP, mDNS, SSDP). This data exists only in memory during the scan and is discarded when the App is closed.</li>
+    <li><strong>WiFi signal strength and security type:</strong> Retrieved from Apple's NetworkExtension API.</li>
+</ul>
+
+<h2>4. Network Calls Made by the App</h2>
+<p>WiFi Check makes the following outbound network connections. These are the <strong>only</strong> data that leaves your device, and they are strictly for measurement purposes:</p>
+
+<h3>4.1 Public IP Address Lookup</h3>
+<ul>
+    <li><strong>Destination:</strong> api.ipify.org (operated by ipify, a third-party service)</li>
+    <li><strong>Protocol:</strong> HTTPS</li>
+    <li><strong>Purpose:</strong> To display your public-facing IP address</li>
+    <li><strong>Data sent:</strong> A standard HTTPS GET request with no payload or identifiers</li>
+    <li><strong>Data received:</strong> Your public IP address</li>
+    <li><strong>Note:</strong> This is the only call that reveals any information about your internet connection to a third party. The ipify service's own privacy policy applies to their handling of this request. You can review it at <a href="https://www.ipify.org">ipify.org</a>.</li>
+</ul>
+
+<h3>4.2 Download Speed Measurement</h3>
+<ul>
+    <li><strong>Destination:</strong> speed.cloudflare.com (operated by Cloudflare)</li>
+    <li><strong>Protocol:</strong> HTTPS</li>
+    <li><strong>Purpose:</strong> To measure download throughput (speed)</li>
+    <li><strong>Data sent:</strong> A standard HTTPS GET request for a ~200KB test file</li>
+    <li><strong>Data received:</strong> A binary test payload (not user content)</li>
+</ul>
+
+<h3>4.3 Latency and DNS Measurements</h3>
+<ul>
+    <li><strong>Destination:</strong> 8.8.8.8 (Google Public DNS)</li>
+    <li><strong>Protocol:</strong> TCP connection (port 53)</li>
+    <li><strong>Purpose:</strong> To measure internet round-trip latency</li>
+    <li><strong>Data sent:</strong> TCP SYN packet only (no payload, no query)</li>
+</ul>
+
+<h3>4.4 Per-Site Speed Tests (User-Initiated Only)</h3>
+<ul>
+    <li><strong>Destinations:</strong> google.com, facebook.com, apple.com</li>
+    <li><strong>Protocol:</strong> HTTPS</li>
+    <li><strong>Purpose:</strong> To measure DNS resolution, TCP latency, and download speed to specific websites</li>
+    <li><strong>Triggered only when:</strong> You manually tap the "Test" button for a specific site</li>
+</ul>
+
+<h3>4.5 Local Network Only</h3>
+<ul>
+    <li><strong>Destinations:</strong> Your router (gateway IP) and devices on your local network</li>
+    <li><strong>Protocols:</strong> ICMP, TCP, UDP, mDNS (multicast), SSDP (multicast)</li>
+    <li><strong>Purpose:</strong> Router latency measurement and network device discovery</li>
+    <li><strong>Scope:</strong> These packets never leave your local network</li>
+</ul>
+
+<h2>5. Sign In with Apple</h2>
+<p>WiFi Check offers optional Sign In with Apple. If you choose to sign in:</p>
+<ul>
+    <li>The App receives an <strong>Apple User ID</strong> (an opaque, app-scoped identifier generated by Apple)</li>
+    <li>This identifier is stored <strong>locally on your device only</strong> in the App's UserDefaults storage</li>
+    <li>It is <strong>not</strong> transmitted to any server, backend, or third party</li>
+    <li>It is used solely to identify your account state within the App</li>
+    <li>You can remove this data at any time by signing out or deleting the App</li>
+</ul>
+
+<h2>6. In-App Purchases</h2>
+<p>WiFi Check offers an optional in-app purchase to remove ads. This transaction is processed entirely by Apple through StoreKit. The Developer does not receive, process, or store any payment information (credit card numbers, billing addresses, etc.). Apple's own privacy policy governs their handling of purchase data.</p>
+
+<h2>7. Advertising</h2>
+<p>The current version of WiFi Check does <strong>not</strong> display advertisements and does <strong>not</strong> include any advertising SDK. If advertising is added in a future version, this privacy policy will be updated before that version is released, and the App will request your consent through Apple's App Tracking Transparency (ATT) framework before any ad-related tracking occurs.</p>
+
+<h2>8. iOS Permissions</h2>
+<p>WiFi Check requests the following iOS permissions:</p>
+<ul>
+    <li><strong>Location (When In Use):</strong> Required by Apple to access your WiFi network name (SSID). WiFi Check does <strong>not</strong> read, use, or store your geographic location. If you deny this permission, the App will still function but cannot display your WiFi network name.</li>
+    <li><strong>Local Network Access:</strong> Required to ping your router and scan for local network devices. If you deny this permission, WiFi quality measurements and network scanning will not function.</li>
+</ul>
+
+<h2>9. Data Retention</h2>
+<p>WiFi Check stores the following on your device only:</p>
+<ul>
+    <li><strong>User preferences:</strong> Refresh interval, accent color, and expansion states (stored in UserDefaults)</li>
+    <li><strong>Apple User ID:</strong> If you use Sign In with Apple (stored in UserDefaults)</li>
+    <li><strong>Purchase state:</strong> Whether you purchased ad removal (stored in UserDefaults)</li>
+</ul>
+<p>Network measurement data (quality scores, metrics, device lists) is <strong>held in memory only</strong> and is discarded when the App is closed or backgrounded. No measurement data is written to persistent storage.</p>
+<p>All locally stored preferences are deleted when you delete the App from your device.</p>
+
+<h2>10. Data Sharing</h2>
+<p>WiFi Check does <strong>not</strong> share any data with third parties. There is no analytics SDK, no crash reporting SDK, no advertising SDK, and no backend server. The Developer has no access to any data on your device.</p>
+
+<h2>11. Children's Privacy (COPPA Compliance)</h2>
+<p>WiFi Check is not directed at children under the age of 13. The App does not knowingly collect personal information from children. Because the App collects no personal information from any user, it is compliant with the Children's Online Privacy Protection Act (COPPA).</p>
+
+<h2>12. Your Rights Under GDPR (European Economic Area)</h2>
+<p>If you are located in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+<ul>
+    <li><strong>Right of Access:</strong> You may request a copy of any personal data the Developer holds about you. Because WiFi Check collects no personal data and has no backend server, there is no personal data held by the Developer.</li>
+    <li><strong>Right to Erasure:</strong> You may request deletion of your personal data. Deleting the App from your device removes all locally stored data. The Developer holds no data to erase.</li>
+    <li><strong>Right to Restriction / Portability:</strong> Not applicable, as no personal data is collected or processed by the Developer.</li>
+    <li><strong>Lawful Basis for Processing:</strong> The minimal data processing performed locally on your device (network measurements) is based on your <strong>consent</strong>, given when you download and use the App and grant the requested iOS permissions. You can withdraw consent at any time by revoking permissions in iOS Settings or deleting the App.</li>
+</ul>
+<p>If advertising is added in a future version, the App will implement a Consent Management Platform (CMP) compliant with GDPR requirements before displaying any personalized ads to EEA users.</p>
+
+<h2>13. Your Rights Under CCPA (California)</h2>
+<p>If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA):</p>
+<ul>
+    <li><strong>Right to Know:</strong> WiFi Check does not collect, sell, or share personal information as defined by the CCPA.</li>
+    <li><strong>Right to Delete:</strong> Delete the App to remove all locally stored data.</li>
+    <li><strong>Right to Opt-Out of Sale:</strong> WiFi Check does not sell your personal information. There is no data to sell.</li>
+    <li><strong>Non-Discrimination:</strong> You will not be discriminated against for exercising your CCPA rights.</li>
+</ul>
+
+<h2>14. Security</h2>
+<p>All outbound network connections made by WiFi Check use HTTPS (TLS encryption). Local network probes use standard protocols (ICMP, TCP, UDP) confined to your local network. No data is stored on external servers, so there is no remote data to secure.</p>
+
+<h2>15. Changes to This Privacy Policy</h2>
+<p>This privacy policy may be updated to reflect changes in the App's functionality. If a future version introduces advertising, analytics, or any form of data collection, this policy will be updated <strong>before</strong> that version is released. The "Effective Date" at the top of this page will be updated accordingly. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+<h2>16. Contact</h2>
+<p>If you have questions about this privacy policy or the App's data practices, contact:</p>
+<p>
+    Santosh Talluri<br>
+    Email: <a href="mailto:contact@wifi-check.app">contact@wifi-check.app</a><br>
+    Website: <a href="https://www.wifi-check.app">www.wifi-check.app</a>
+</p>
+
+</body>
+</html>
