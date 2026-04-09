@@ -30,6 +30,7 @@ final class NetworkViewModel: ObservableObject {
     @Published var accentColorHex: String = "30D158"
     @Published var publicBannerDismissed: Bool = false
     @Published var adBannerDismissed: Bool = false
+    @Published var throughputRunCount: Int = 0   // # of download/upload tests run this session
 
     var accentColor: Color { Color(hex: accentColorHex) }
 
@@ -48,11 +49,12 @@ final class NetworkViewModel: ObservableObject {
     private var countdownTask: Task<Void, Never>?
     private var consecutiveFailures: Int = 0
 
-    // Throughput throttle — only run download/upload every 5 minutes
+    // Throughput: run once on first launch, then only on manual "Run Test" tap.
+    // manualRefresh() resets lastThroughputDate to nil to trigger a re-run.
     private var lastThroughputDate: Date?
     private var lastThroughputMbps: Double?
     private var lastUploadMbps: Double?
-    private let throughputInterval: TimeInterval = 300
+    private let throughputInterval: TimeInterval = .greatestFiniteMagnitude
 
     // Rolling average buffer for score smoothing (last 5 readings)
     private var compositeBuffer: [Int] = []
@@ -217,7 +219,10 @@ final class NetworkViewModel: ObservableObject {
         let tp: Double?
         let up: Double?
         if shouldRunThroughput {
-            if freshDownload != nil || freshUpload != nil { lastThroughputDate = Date() }
+            if freshDownload != nil || freshUpload != nil {
+                lastThroughputDate = Date()
+                throughputRunCount += 1
+            }
             lastThroughputMbps = freshDownload
             lastUploadMbps = freshUpload
             tp = freshDownload

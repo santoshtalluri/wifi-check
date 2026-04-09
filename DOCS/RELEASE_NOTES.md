@@ -3,7 +3,7 @@
 ## v0.3 (In Progress)
 **Status:** Development — targeting first public App Store release
 **Platforms:** iOS 17+ · tvOS 26.4+
-**Focus:** tvOS companion app, device naming & memory, bug fixes from Apple review, personalization
+**Focus:** tvOS companion app, device naming & memory, Speed Test overhaul, bug fixes from Apple review, personalization
 
 ### New Platform — Apple TV
 - ✅ Full tvOS app (`Wi​Fi​Check ​TV` target) sharing all models, services, and utilities with iOS
@@ -13,6 +13,25 @@
 - ✅ Live device bandwidth monitoring (DeviceBandwidthService via BSD getifaddrs)
 - ✅ Score breakdown legend with weights and color key
 - ✅ Connection type display — hides SSID row on wired connections
+
+### Speed Test Overhaul [iOS]
+- ✅ **On-demand only** — speed test no longer runs automatically; a prominent "Test Your Speed" CTA triggers each test
+- ✅ **Shimmer animation** — card pulses while measuring, giving clear visual feedback that a test is in progress
+- ✅ **Re-run button** — appears after each completed test for one-tap re-measurement
+- ✅ **Gauge bars removed** — cleaner, minimal numeric result display (Download Mbps / Upload Mbps)
+- ✅ **100 MB test payload** — 75 MB download + 25 MB upload per test; ensures TCP is fully ramped before measurement completes, giving accurate readings at 100 Mbps–1 Gbps+
+- ✅ **Methodology note** — inline explanation of why results may differ from Speedtest.net (single-stream vs. multi-stream)
+- ✅ **Measurement loop gated to WiFi Info tab** — the 5-second polling loop pauses whenever the user is on Speed Test, Network Scan, or Settings; no background interference
+- ✅ **Accent color on selection pills** — Speed Unit and other selector pills highlight with the user's chosen accent color instead of a hardcoded green
+- ✅ **Data Usage card expanded by default** — data estimate visible without an extra tap
+- ✅ **Help buttons removed** — Speed Unit and Data Usage ⓘ buttons removed; UI is self-explanatory
+
+### Connection Diagnosis Redesign [iOS]
+- ✅ **Green pulsing banner** — healthy connections display a prominent animated banner
+- ✅ **Contextual headlines** — banner rotates through creative, context-aware messages: "Lightning Fast", "Blazing Smooth", "Running at Full Speed", "Solid & Steady", "Fast & Reliable", "All Systems Clear"
+
+### Network Info [iOS]
+- ✅ **Network Path card header** — now shows the connected WiFi network SSID ("Connected via [Network Name]") instead of a generic label
 
 ### New Features (iOS)
 - ✅ Device naming — name unknown devices on your network, names persist across scans

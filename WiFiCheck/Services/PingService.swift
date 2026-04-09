@@ -27,13 +27,14 @@ final class PingService {
     // MARK: - TCP Probe
 
     private func tcpProbe(host: String, port: UInt16, timeout: TimeInterval) async -> Double? {
+        guard let nwPort = NWEndpoint.Port(rawValue: port) else { return nil }
         let start = CFAbsoluteTimeGetCurrent()
 
         return await withCheckedContinuation { continuation in
             let queue = DispatchQueue(label: "com.wificheck.ping.tcp")
             let connection = NWConnection(
                 host: NWEndpoint.Host(host),
-                port: NWEndpoint.Port(rawValue: port)!,
+                port: nwPort,
                 using: .tcp
             )
 
@@ -68,13 +69,14 @@ final class PingService {
     // MARK: - UDP Probe
 
     private func udpProbe(host: String, port: UInt16, timeout: TimeInterval) async -> Double? {
+        guard let nwPort = NWEndpoint.Port(rawValue: port) else { return nil }
         let start = CFAbsoluteTimeGetCurrent()
 
         return await withCheckedContinuation { continuation in
             let queue = DispatchQueue(label: "com.wificheck.ping.udp")
             let connection = NWConnection(
                 host: NWEndpoint.Host(host),
-                port: NWEndpoint.Port(rawValue: port)!,
+                port: nwPort,
                 using: .udp
             )
 

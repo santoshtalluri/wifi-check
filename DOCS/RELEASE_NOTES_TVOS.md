@@ -72,6 +72,7 @@
 - `WiFiCheckTV.entitlements` — `com.apple.developer.networking.wifi-info = true`
 - `LocationAuthorizationManager` — CLLocationManager singleton for SSID authorization
 - `DeviceBandwidthService` — BSD interface snapshot service with `measure()` / `recordSessionStart()` API
+- **`ThroughputService` payload update (shared with iOS)** — 75 MB download + 25 MB upload per test (100 MB total); 45-second timeout; eliminates TCP slow-start distortion on connections above 100 Mbps
 
 #### Bug Fixes
 - **`TVDeviceDetailView` compiler error** — `device.mac` is `String` (non-optional); `?? "Unavailable"` was a type error. Fixed by removing the MAC row entirely (consistent with iOS v0.3 decision)

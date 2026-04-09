@@ -75,20 +75,20 @@ struct MetricsCard: View {
 
                 Spacer()
 
-                Text(showAdvanced ? "7 of 7" : "4 of 7")
+                Text(showAdvanced ? "Show less" : "Show more")
                     .font(.system(size: 11 * scale))
                     .foregroundColor(.textSecondary)
 
                 Image(systemName: "chevron.down")
                     .font(.system(size: 12 * scale, weight: .medium))
-                    .foregroundColor(.textTertiary)
+                    .foregroundColor(.textSecondary)
                     .rotationEffect(.degrees(showAdvanced ? 180 : 0))
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity)
         }
-        .background(Color.textSecondary.opacity(0.08))
+        .background(Color.textSecondary.opacity(0.15))
         .padding(.horizontal, -16)
         .padding(.top, -16)
         .buttonStyle(.plain)

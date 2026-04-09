@@ -2,6 +2,9 @@ import Foundation
 import Combine
 import Network
 import UIKit
+import OSLog
+
+private let scanLog = Logger(subsystem: "com.wificheck", category: "NetworkScan")
 
 struct NetworkDevice: Identifiable, Equatable, Hashable {
     let id: String // use IP as stable ID so updates don't flicker
@@ -281,13 +284,13 @@ final class NetworkScanService: ObservableObject {
                 return
             }
 
-            print("[Scan] ===== Starting comprehensive scan on \(subnet).0/24 =====")
+            scanLog.debug("[Scan] Starting scan on \(subnet, privacy: .private).0/24")
 
             // ── Phase 1: ICMP Ping (finds most devices) ──────
 
             scanPhase = "Pinging network..."
             let icmpAlive = await icmpPingSweep(subnet: subnet)
-            print("[Scan] ICMP round 1: \(icmpAlive.count) devices")
+            scanLog.debug("[Scan] ICMP round 1: \(icmpAlive.count) devices")
             for ip in icmpAlive { knownIPs.insert(ip) }
             discoveredCount = knownIPs.count
 
@@ -296,7 +299,8 @@ final class NetworkScanService: ObservableObject {
             let icmpAlive2 = await icmpPingSweep(subnet: subnet)
             for ip in icmpAlive2 { knownIPs.insert(ip) }
             discoveredCount = knownIPs.count
-            print("[Scan] ICMP round 2: total \(knownIPs.count) IPs")
+            let knownCount = knownIPs.count
+            scanLog.debug("[Scan] ICMP round 2: total \(knownCount) IPs")
 
             // ── Phase 2: TCP + Bonjour + SSDP in parallel ──────
 
@@ -304,7 +308,7 @@ final class NetworkScanService: ObservableObject {
             let (tcpResult, bonjourResult, ssdpResult) = await performServiceDiscovery(
                 subnet: subnet, localIP: localIP, gatewayIP: gatewayIP
             )
-            print("[Scan] TCP: \(tcpResult.count), Bonjour: \(bonjourResult.count), SSDP: \(ssdpResult.count)")
+            scanLog.debug("[Scan] TCP: \(tcpResult.count), Bonjour: \(bonjourResult.count), SSDP: \(ssdpResult.count)")
 
             for ip in tcpResult { knownIPs.insert(ip) }
             discoveredCount = knownIPs.count
@@ -331,7 +335,7 @@ final class NetworkScanService: ObservableObject {
             let gatewayDNS = await batchDNSPTRLookup(
                 ips: Array(knownIPs), dnsServer: gatewayIP, port: 53, timeout: 3.0
             )
-            print("[Scan] Gateway DNS resolved \(gatewayDNS.count) names")
+            scanLog.debug("[Scan] Gateway DNS resolved \(gatewayDNS.count) names")
             for (ip, name) in gatewayDNS {
                 let cleaned = cleanDNSName(name)
                 if !cleaned.isEmpty {
@@ -344,7 +348,7 @@ final class NetworkScanService: ObservableObject {
                 ips: Array(knownIPs), dnsServer: "224.0.0.251", port: 5353, timeout: 2.0,
                 unicastResponse: true
             )
-            print("[Scan] mDNS resolved \(mdns.count) names")
+            scanLog.debug("[Scan] mDNS resolved \(mdns.count) names")
             for (ip, name) in mdns {
                 let cleaned = cleanDNSName(name)
                 if !cleaned.isEmpty {
@@ -397,10 +401,8 @@ final class NetworkScanService: ObservableObject {
             }
 
             let named = devices.filter { !$0.hostname.hasPrefix("Device (") }.count
-            print("[Scan] ===== Done: \(devices.count) devices, \(named) with names =====")
-            for d in devices {
-                print("[Scan]   \(d.ip)  \"\(d.hostname)\"")
-            }
+            let deviceCount = devices.count
+            scanLog.debug("[Scan] Done: \(deviceCount) devices, \(named) with names")
 
             // ── ML enrichment: classify devices using on-device LLM when available ──
             scanPhase = "Classifying devices..."
@@ -514,7 +516,7 @@ final class NetworkScanService: ObservableObject {
 
                 let sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_ICMP)
                 guard sock >= 0 else {
-                    print("[ICMP] Failed to create socket: \(errno)")
+                    scanLog.error("[ICMP] Failed to create socket: \(errno)")
                     continuation.resume(returning: [])
                     return
                 }

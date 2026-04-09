@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>WiFi Check needs your location to display your Wi-Fi network name (SSID). Your location is never stored or shared.</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>App-Prefs</string>
@@ -12,11 +10,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-	</dict>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string>LaunchBackground</string>
 	</dict>
 	<key>NSBonjourServices</key>
 	<array>
@@ -32,5 +25,10 @@
 		<string>_tcp</string>
 		<string>_udp</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+	</dict>
 </dict>
 </plist>

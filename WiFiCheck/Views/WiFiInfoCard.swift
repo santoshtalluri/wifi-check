@@ -78,20 +78,20 @@ struct WiFiInfoCard: View {
 
                 Spacer()
 
-                Text("More Details")
+                Text(showDetails ? "Show less" : "Show more")
                     .font(.system(size: 11 * scale))
                     .foregroundColor(.textSecondary)
 
                 Image(systemName: "chevron.down")
                     .font(.system(size: 12 * scale, weight: .medium))
-                    .foregroundColor(.textTertiary)
+                    .foregroundColor(.textSecondary)
                     .rotationEffect(.degrees(showDetails ? 180 : 0))
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity)
         }
-        .background(Color.textSecondary.opacity(0.08))
+        .background(Color.textSecondary.opacity(0.15))
         .padding(.horizontal, -16)
         .padding(.top, -16)
         .buttonStyle(.plain)
